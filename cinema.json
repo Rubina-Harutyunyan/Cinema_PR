@@ -1,0 +1,56 @@
+{
+  "cinema": [
+    {
+      "id": 1,
+      "name": "Cinema",
+      "address": "Yerevan",
+      "description": "movie",
+      "images": [
+        {
+          "image": "assets/images/cinema1.jpg"
+        },
+        {
+          "image": "assets/images/cinema2.jpg"
+        },
+        {
+          "image": "assets/images/cinema3.jpg"
+        },
+        {
+          "image": "assets/images/cinema4.jpg"
+        },
+        {
+          "image": "assets/images/cinema5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Moscow",
+      "address": "Yerevan",
+      "description": "movie",
+      "images": [
+        {
+          "image": "assets/images/Moscow1.jpeg"
+        },
+        {
+          "image": "assets/images/Moscow2.jpg"
+        },
+        {
+          "image": "assets/images/Moscow3.jpg"
+        },
+        {
+          "image": "assets/images/Moscow4.jpg"
+        },
+        {
+          "image": "assets/images/Moscow6.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "KinoPark",
+      "address": "Yerevan",
+      "description": "movie"
+    }
+  ]
+}

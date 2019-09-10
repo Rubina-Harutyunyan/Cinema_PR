@@ -1,0 +1,34 @@
+#cinema{
+  margin: 9px;
+  background-color: rgba(204, 255, 173, 0.77);
+  color: #255465;
+  font-weight: bold;
+  border: none;
+  /*border: 1px solid rgba(70, 67, 56, 0.71);*/
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(36, 26, 29, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#profile{
+  margin: 9px;
+  background-color: rgba(255, 227, 227, 0.77);
+  color: #2f5168;
+  font-weight: bold;
+  border: none;
+  /*border: 1px solid rgba(70, 67, 56, 0.71);*/
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(36, 26, 29, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+
+#logOut{
+  margin: 9px;
+  background-color: rgba(15, 81, 126, 0.72);
+  color: #eeffda;
+  font-weight: normal;
+  border: none;
+  /*border: 1px solid #54524d; */
+  box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0, rgba(68, 29, 51, 0.61) 0 1px 17px 0px inset;
+  border-radius: 7px;
+  float: right;
+}

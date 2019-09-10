@@ -1,0 +1,35 @@
+
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <div
+          *ngFor="let item of cinema"
+          fxFlex
+          fxLayout
+          fxLayout.lt-sm="column"
+          fxLayoutGap="9px"
+          fxLayoutAlign="center"
+        >
+          <mat-card class="example-card" >
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <img
+              mat-card-image
+              src="{{item.images[randomNumber].image}}"
+              alt="Photo of a Shiba Inu"
+            />
+            <mat-card-content>
+              <p>
+                {{item.address}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+
+<h2 mat-dialog-title></h2>
+
+<form [formGroup]="editMovie" (ngSubmit)="edit()">
+  <mat-dialog-content class="mat-typography">
+    <div class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <!--<input class="ng-hide" id="input-file-id" (change)="readUrl($event)" multiple type="file" />-->
+        <!--<label for="input-file-id" class="md-button md-raised md-primary"></label>-->
+        <button type="button" md-button (click)="imgFileInput.click()">Add a photo</button>
+        <input hidden type="file" #imgFileInput (change)="readUrl($event)"/>
+        <input matInput type="text" (change)="readUrl($event)" >
+        <img *ngIf="flag" [src]="url" width="39px">
+        <!--<input matInput placeholder="poster" formControlName="poster">-->
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" (keyup)="readUrl2($event)" formControlName="trailer" placeholder="trailer">
+        <iframe width="100%" *ngIf="flagURL" height="100%" frameBorder="0"   [src]="safeURL"></iframe>
+        <!--<input matInput placeholder="trailer" formControlName="trailer">-->
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput  formControlName="date" placeholder="date" style="z-index: 2000"
+               [owlDateTimeTrigger]="dtPicker2" [owlDateTime]="dtPicker2">
+        <owl-date-time #dtPicker2 ></owl-date-time>
+        <!--<input matInput placeholder="date" formControlName="date">-->
+      </mat-form-field>
+
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button cdkFocusInitial (click)="edit()" >Save</button>
+  </mat-dialog-actions>
+</form>
+
+<!--<app-data-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-data-table>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<form [formGroup]="editMovie" (ngSubmit)="edit()">-->
+<!--<mat-dialog-content class="mat-typography">-->
+<!--<div class="example-form">-->
+<!--<mat-form-field class="example-full-width">-->
+<!--<input type="text" placeholder="name" formControlName="name">-->
+<!--</mat-form-field>-->
+
+<!--<mat-form-field class="example-full-width">-->
+<!--<input type="file" (change)="readUrl($event)" placeholder="poster">-->
+<!--<img [src]="url" width="90px">-->
+<!--</mat-form-field>-->
+
+<!--<mat-form-field class="example-full-width">-->
+<!--<input type="text" value="" (keyup)="readUrl2($event)" placeholder="trailer">-->
+<!--<iframe width="100%" *ngIf="flag" height="100%" frameBorder="0"   [src]="safeURL"></iframe>-->
+<!--</mat-form-field>-->
+<!--<mat-form-field class="example-full-width">-->
+<!--<input formControlName="date" style="z-index: 2000"-->
+<!--[owlDateTimeTrigger]="dtPicker2" [owlDateTime]="dtPicker2">-->
+<!--<owl-date-time #dtPicker2></owl-date-time>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--</mat-dialog-content>-->
+<!--<mat-dialog-actions align="end">-->
+<!--<button mat-button mat-dialog-close>Cancel</button>-->
+<!--<button type="submit" mat-button cdkFocusInitial >Save</button>-->
+<!--</mat-dialog-actions>-->
+<!--</form>-->

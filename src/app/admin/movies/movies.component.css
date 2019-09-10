@@ -1,0 +1,23 @@
+input {
+  width: 290px;
+}
+
+/*.cdk-overlay-container {*/
+  /*z-index: 10000!important;*/
+/*}*/
+
+
+#add {
+  margin-left: 390px;
+  margin-top: 59px;
+  /*margin: 7px;*/
+  color: #580e0a;
+  padding: 5px 9px;
+  font-weight: bold;
+  width: 99px;
+  /*margin: 2px 2px 2px 15px;*/
+  background-color: rgba(239, 255, 199, 0.36);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 15px 0px inset;
+  border-radius: 7px;
+}

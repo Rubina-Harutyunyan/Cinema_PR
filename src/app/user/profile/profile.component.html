@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <ul class="list-group">
+        <li class="list-group-item">{{user.userName}}</li>
+        <li class="list-group-item">{{user.firstName}}</li>
+        <li class="list-group-item">{{user.lastName}}</li>
+        <li class="list-group-item">{{user.address}}</li>
+        <li class="list-group-item">{{user.phone}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-6 offset-3 text-center">
+    <button id="edit" (click)="modal.getModal('myModal').open()"><i class="fas fa-pencil-alt"></i></button>
+    <button  id="editPass" (click)="modal.getModal('myModal2').open()">Password <i class="fas fa-pencil-alt"></i></button>
+  </div>
+</div>
+
+
+
+<ngx-smart-modal #myModal identifier="myModal">
+  <div class="col-6 offset-3">
+    <form [formGroup]="details" (ngSubmit)="save()">
+      <input type="text" formControlName="userName">
+      <input type="text" formControlName="firstName">
+      <input type="text" formControlName="lastName">
+      <input type="text" formControlName="address">
+      <input type="text" formControlName="phone">
+    </form>
+  </div>
+  <div class="col text-right">
+  <button type="submit" (click)="save(); myModal.close()" id="save">Save</button>
+  <button (click)="myModal.close()" id="cancel">Cancel</button>
+  </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #myModal2 identifier="myModal2">
+  <div class="col-6 offset-3" >
+    <form [formGroup]="password" (ngSubmit)="save()">
+      <!--<input type="text" formControlName="userName">-->
+      <input type="password" placeholder="Current" formControlName="oldPassword">
+      <input type="password" placeholder="New" formControlName="password">
+      <input type="password" placeholder="Repeat new" formControlName="newPassword">
+    </form>
+  </div>
+  <div class="col text-right">
+    <button id="savePass" type="submit" (click)="savePass(); myModal2.close()">Save</button>
+    <button id="cancelPass" (click)="myModal2.close()">Cancel</button>
+  </div>
+</ngx-smart-modal>

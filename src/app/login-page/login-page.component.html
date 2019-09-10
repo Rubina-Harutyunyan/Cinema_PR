@@ -1,0 +1,21 @@
+
+<form [formGroup]="user" (ngSubmit)="login()">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-6 offset-3 ">
+        <input type="text" placeholder="Username" minlength="3" maxlength="40" formControlName="userName">
+      </div>
+      <div class="col-6 offset-3">
+        <input type="password" placeholder="Password" formControlName="password">
+      </div>
+
+    </div>
+    <div class="row text-center">
+      <div class="col-6 offset-3">
+        <button class="btn btn-light" id="signUp" routerLink="/signUp" >SignUp</button>
+        <button class="btn btn-light" id="login" type="submit">Login</button>
+      </div>
+    </div>
+  </div>
+</form>
+

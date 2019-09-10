@@ -1,0 +1,27 @@
+
+
+
+    <form [formGroup]="newUser" (ngSubmit)="onSubmit()">
+      <div class="container">
+      <div class="row text-center" >
+        <div class="col-6 offset-3">
+          <input type="text" formControlName="firstName" placeholder="FirstName">
+        </div>
+        <div class="col-6 offset-3">
+          <input type="text" formControlName="lastName" placeholder="LastName">
+        </div>
+        <div class="col-6 offset-3">
+          <input type="text" formControlName="address" placeholder="Address">
+        </div>
+        <div class="col-6 offset-3">
+          <input type="text" formControlName="phone" placeholder="Phone">
+        </div>
+        <div class="col-4 offset-4">
+          <button class="btn btn-light" [disabled]="newUser.invalid" type="submit" id="signUp">SignUp</button>
+        </div>
+      </div>
+      </div>
+    </form>
+
+
+

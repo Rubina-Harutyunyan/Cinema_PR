@@ -1,0 +1,11 @@
+
+
+<mat-grid-list cols="2" rowHeight="95px">
+  <mat-grid-tile>
+    <button mat-stroked-button (click)="openDialog()">
+      <i class="material-icons"></i>Add cinema
+    </button>
+  </mat-grid-tile>
+ </mat-grid-list>
+<app-data-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-data-table>
+

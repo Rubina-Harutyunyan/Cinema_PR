@@ -1,0 +1,125 @@
+<div class="container">
+
+<div>
+  <ngx-datatable-column name="Options">
+    <button md-raised-button color="warn" id="add" (click)="modal.getModal('myModal').open()">Add user</button>
+  </ngx-datatable-column>
+  <ngx-smart-modal #myModal identifier="myModal">
+  <div class="col-6 offset-3" id="modal">
+  <form [formGroup]="newUser" (ngSubmit)="addUser()">
+  <input type="text" placeholder="userName" formControlName="userName">
+  <input type="password" placeholder="password" formControlName="password">
+  <input type="password" placeholder="confirmPassword" formControlName="confirmPassword">
+  <input type="text" placeholder="firstName" formControlName="firstName">
+  <input type="text" placeholder="lastName" formControlName="lastName">
+  <input type="text" placeholder="address" formControlName="address">
+  <input type="text" placeholder="phone" formControlName="phone">
+  </form>
+  </div>
+  <div class="col text-right">
+  <button id="save" type="submit" (click)="addUser(); myModal.close()">Save</button>
+  <button id="cancel" (click)="myModal.close()">Cancel</button>
+  </div>
+  </ngx-smart-modal>
+</div>
+
+
+  <div>
+    <input
+      type="text"
+      style="padding:8px;margin:15px auto;width:30%;"
+      placeholder="Type to filter the name or the address column..."
+      (keyup)="updateFilter($event)"
+    />
+    <ngx-datatable
+      class="material"
+      [rows]="rows"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'">
+      <ngx-datatable-column name="id">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{column.id}}
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="UserName">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column name="FirstName">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          <span (click)="sort()">{{column.name}}</span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <!--<i [innerHTML]="row['name']"></i>  <i>{{value}}</i>-->
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="LastName">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Address">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Phone">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p>{{value}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Actions" prop="id">
+        <ng-template  let-value="value" let-row="index" ngx-datatable-cell-template>
+          <button id="edit" (click)="edit(value)" (click)="modal.getModal('myModal2').open()">Edit</button>
+          <button (click)="remove(value)" id="remove">Remove</button>
+
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+
+  <div>
+
+    <ngx-smart-modal #myModal2 identifier="myModal2">
+      <div class="col-6 offset-3" id="modal">
+        <form [formGroup]="editedUser" (ngSubmit)="save()">
+          <input type="text" placeholder="userName" formControlName="userName">
+          <input type="text" placeholder="firstName" formControlName="firstName">
+          <input type="text" placeholder="lastName" formControlName="lastName">
+          <input type="text" placeholder="address" formControlName="address">
+          <input type="text" placeholder="phone" formControlName="phone">
+        </form>
+      </div>
+      <div class="col text-right">
+        <button id="save" type="submit" (click)="save(); myModal2.close()">Save</button>
+        <button id="cancel" (click)="myModal2.close()">Cancel</button>
+      </div>
+    </ngx-smart-modal>
+  </div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,57 @@
+<div class="container">
+
+  <div>
+    <ngx-datatable-column name="Options">
+      <button md-raised-button color="warn" id="add" (click)="modal.getModal('myModal').open()">Add</button>
+    </ngx-datatable-column>
+    <ngx-smart-modal #myModal identifier="myModal">
+      <div class="col-6 offset-3" id="modal">
+        <form [formGroup]="newMovie" (ngSubmit)="addMovie()">
+          <input type="text" placeholder="name" formControlName="name">
+          <input type="file" (change)="readUrl($event)" placeholder="poster">
+          <!--<input type='file' >-->
+          <img [src]="url" width="90px">
+          <input type="text" value="" (keyup)="readUrl2($event)" placeholder="trailer">
+          <iframe width="100%" *ngIf="flag" height="100%" frameBorder="0"   [src]="safeURL"></iframe>
+
+          <!--<input type="text" placeholder="trailer" formControlName="trailer">-->
+
+          <input formControlName="date"  style="z-index: 5000"
+                 [owlDateTimeTrigger]="dtPicker2"  [owlDateTime]="dtPicker2">
+          <owl-date-time #dtPicker2></owl-date-time>
+        </form>
+      </div>
+      <div class="col text-right">
+        <button id="save" type="submit" (click)="addMovie(); myModal.close()">Save</button>
+        <button id="cancel" (click)="myModal.close()">Cancel</button>
+      </div>
+    </ngx-smart-modal>
+  </div>
+
+
+  <!--<div>-->
+    <!--<input-->
+      <!--type="text"-->
+      <!--style="padding:8px;margin:15px auto;width:30%;"-->
+      <!--placeholder="Type to filter the name or the address column..."-->
+      <!--(keyup)="updateFilter($event)"-->
+    <!--/>-->
+
+  <!--</div>-->
+
+  <div>
+
+    <app-data-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-data-table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

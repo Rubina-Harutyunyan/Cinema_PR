@@ -1,0 +1,31 @@
+
+
+      <form [formGroup]="newUser" (ngSubmit)="onSubmit()">
+        <div class="container">
+        <div class="row text-center">
+          <div class="col-6 offset-3">
+            <input type="text" placeholder="Username" formControlName="userName" >
+            <div *ngIf=" newUser.get('userName').hasError('required')  && newUser.get('userName').dirty">Required field</div>
+            <div *ngIf=" newUser.get('userName').hasError('userName')  && newUser.get('userName').dirty">Must contain unless 3 letters</div>
+          </div>
+          <div class="col-6 offset-3">
+            <input type="password" placeholder="Password" formControlName="password">
+            <div *ngIf="newUser.get('password').hasError('minlength') && newUser.get('password').dirty">Short</div>
+            <div *ngIf="newUser.get('password').hasError('pattern')">asdadad</div>
+          </div>
+          <div class="col-6 offset-3">
+            <input type="password" placeholder="ConfirmPassword" formControlName="confirmPassword" >
+            <div *ngIf=" newUser.get('confirmPassword').dirty && newUser.get('confirmPassword').value !== newUser.get('password').value"  >Passwords don't match</div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 offset-3 " >
+             <button class="btn btn-light" type="submit" id="signUp" [disabled]=" newUser.invalid">SignUp</button>
+          </div>
+        </div>
+        </div>
+      </form>
+
+
+
+

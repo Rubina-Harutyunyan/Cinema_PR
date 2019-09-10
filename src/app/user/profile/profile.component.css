@@ -1,0 +1,93 @@
+ul {
+  margin-top: 27px;
+
+}
+ul li {
+  background-color: rgba(255, 219, 195, 0.05);
+  border: 2px solid rgba(99, 91, 73, 0.66);
+  margin: 7px;
+  color: #2a5265;
+  font-size: 19px;
+  font-weight: normal;
+  color: rgba(7, 118, 118, 0.85);
+}
+
+#edit{
+  margin: 9px;
+  color: #580e0a;
+  padding: 2px 3px;
+  font-weight: bold;
+  width: 59px;
+  background-color: rgba(75, 176, 208, 0.36);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#editPass{
+  margin: 9px;
+  color: #580e0a;
+  padding: 2px 3px;
+  font-weight: bold;
+  width: 109px;
+  background-color: rgba(75, 176, 208, 0.36);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+input{
+  background-color: #fffce8;
+  width: 250px;
+  margin: 7px;
+  padding: 5px;
+}
+
+#save{
+  margin: 9px;
+  color: #fffce8;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color: rgba(143, 185, 122, 0.78);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#cancel{
+  margin: 9px;
+  color: #e0e2dd;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color:red;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+
+#savePass{
+  margin: 9px;
+  color: #fffce8;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color: rgba(143, 185, 122, 0.78);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#cancelPass{
+  margin: 9px;
+  color: #e0e2dd;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color:red;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}

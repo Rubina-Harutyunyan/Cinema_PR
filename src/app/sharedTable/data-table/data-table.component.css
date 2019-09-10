@@ -1,0 +1,36 @@
+table {
+  margin-top: 19px;
+  width: 70%;
+  background-color: rgba(217, 226, 168, 0.16);
+}
+
+#table {
+  margin-left: 19px;
+}
+
+#edit{
+  margin: 7px;
+  color: #580e0a;
+  padding: 1px 2px;
+  font-weight: bold;
+  width: 39px;
+  /*margin: 2px 2px 2px 15px;*/
+  background-color: rgba(75, 176, 208, 0.25);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 19px;
+}
+
+
+#remove{
+  margin: 7px;
+  color: #580e0a;
+  padding: 1px 2px;
+  font-weight: bold;
+  width: 39px;
+  /*margin: 2px 2px 2px 15px;*/
+  background-color: rgba(169, 171, 208, 0.36);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 59px;
+}

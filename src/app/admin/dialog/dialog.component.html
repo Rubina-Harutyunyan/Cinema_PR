@@ -1,0 +1,31 @@
+
+
+
+
+<h2 mat-dialog-title></h2>
+<form [formGroup]="form" (ngSubmit)="add()">
+  <mat-dialog-content class="mat-typography">
+    <div class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Address" formControlName="address">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Description" formControlName="description">
+      </mat-form-field>
+
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button cdkFocusInitial >Add</button>
+    <button type="button" mat-button cdkFocusInitial (click)="save()">Save</button>
+  </mat-dialog-actions>
+</form>
+
+
+

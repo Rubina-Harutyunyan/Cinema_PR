@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "userName": "oliharutyunyan9@gmail.com",
+      "password": "admin777",
+      "firstName": "Rubina",
+      "lastName": "Harutyunyan",
+      "address": "Yerevan",
+      "phone": "0037491120412",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "userName": "Oli",
+      "password": "999",
+      "firstName": "Oli",
+      "lastName": "Harutyunyan",
+      "address": "Yerevan",
+      "phone": "0037491120412",
+      "step": 1,
+      "role": "user",
+      "id": 2
+    },
+    {
+      "userName": "Luiz",
+      "password": "888",
+      "firstName": "Luiza",
+      "lastName": "Badikyan",
+      "address": "Yerevan",
+      "phone": "0037499550565",
+      "step": 1,
+      "role": "user",
+      "id": 3
+    }
+  ]
+}

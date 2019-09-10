@@ -1,0 +1,61 @@
+.container {
+  margin-top: 19px;
+}
+
+#add {
+  margin: 9px;
+  background-color: rgba(180, 255, 236, 0.77);
+  color: #314d4a;
+  font-weight: bold;
+  border: none;
+  /*border: 1px solid rgba(70, 67, 56, 0.71);*/
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(36, 26, 29, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#edit {
+  margin: 9px;
+  background-color: rgba(204, 255, 173, 0.77);
+  color: #255465;
+  font-weight: bold;
+  border: none;
+  /*border: 1px solid rgba(70, 67, 56, 0.71);*/
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(36, 26, 29, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#remove {
+  margin: 9px;
+  color: #e0e2dd;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color:red;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#save{
+  margin: 9px;
+  color: #fffce8;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color: rgba(143, 185, 122, 0.78);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
+
+#cancel{
+  margin: 9px;
+  color: #e0e2dd;
+  padding: 2px 3px;
+  font-weight: normal;
+  width: 59px;
+  background-color:red;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(16, 36, 20, 0.8) 0 1px 19px 0px inset;
+  border-radius: 7px;
+}
